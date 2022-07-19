@@ -1,0 +1,23 @@
+
+<div class="container text-center mt-5">
+    <h3 class="display-3">
+        {{questions[0].category}} Quiz  
+    </h3>
+
+    <div class="item-container mt-5"  >
+        <div class="questions-tile" *ngFor="let question of questions; let j = index" (click)="handleQuestionClick($event, question) " >
+            <p class="item">Question</p>
+            <p  class="item">{{j+1}}</p>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <router-outlet></router-outlet>
+    </div>
+   
+    <div class="mt-5 mb-5">
+        <a class="finish-button" (click)="submitQuiz()">Finish Quiz</a>
+    </div>
+    
+   
+</div>

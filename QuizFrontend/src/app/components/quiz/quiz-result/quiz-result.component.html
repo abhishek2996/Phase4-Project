@@ -1,0 +1,28 @@
+<div class="container text-center mt-5 results-container">
+    <h4 class="display-4">Quiz: {{questions[0].category}}</h4>
+
+    <p class="mt-5 mb-5 lead">Quiz Information</p>
+
+    <div class="row">
+        <div class="col result-col-left">
+            <p>Score : {{score}}%</p>
+            <p>Total Questions: {{totalQuestions}}</p>
+            <p>Correct Answers: {{correctAnswers}}</p>
+        </div>
+        <div class="col result-col-right">
+            <p>Topic: {{questions[0].category}}</p>
+            <p>Grade: {{grade}}</p>
+            <p>Final: {{final}}</p>
+        </div>
+    </div>
+
+    <div class="d-flex p-2 justify-content-end mb-5">
+        <a  class="btn btn-outline-dark mt-5 " (click)="handleReviewClick()"> Review </a>
+    </div>
+
+    <hr>
+    <router-outlet></router-outlet>
+    
+</div>
+
+

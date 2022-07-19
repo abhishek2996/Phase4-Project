@@ -1,0 +1,26 @@
+
+<div class="container mt-5">
+<p class="mt-5 lead">Answers</p>
+
+<div class="reviews" *ngFor="let question of questions">
+    <div class="row">
+        <p class="mt-5 mb-4">Question:  {{question.question}} </p>
+        <div class="col result-col-left">
+            <p class="lead mt-4 mb-4">Given Answers</p>
+            <p [ngClass]="checkOption(question,question.correctAnswer) === question.options.optionA ? 'option-correct ' : 'option-incorrect'" >{{question.options.optionA}}</p>
+            <p [ngClass]="checkOption(question,question.correctAnswer) === question.options.optionB ? 'option-correct ' : 'option-incorrect'">{{question.options.optionB}}</p>
+            <p [ngClass]="checkOption(question,question.correctAnswer) === question.options.optionC ? 'option-correct ' : 'option-incorrect'">{{question.options.optionC}}</p>
+            <p [ngClass]="checkOption(question,question.correctAnswer) === question.options.optionD ? 'option-correct ' : 'option-incorrect'">{{question.options.optionD}}</p>
+        </div>
+        <div class="col result-col-right">
+            <p class="lead mt-4 mb-4">Correct Answers</p>
+            <p [ngClass]="question.correctAnswerId.answerA ? 'option-correct ' : 'option-incorrect'" >{{question.options.optionA}}</p>
+            <p [ngClass]="question.correctAnswerId.answerB ? 'option-correct ' : 'option-incorrect'">{{question.options.optionB}}</p>
+            <p [ngClass]="question.correctAnswerId.answerC ? 'option-correct ' : 'option-incorrect'">{{question.options.optionC}}</p>
+            <p [ngClass]="question.correctAnswerId.answerD ? 'option-correct ' : 'option-incorrect'">{{question.options.optionD}}</p>
+            
+        </div>
+    </div>
+</div>
+
+</div>

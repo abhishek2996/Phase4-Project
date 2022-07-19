@@ -1,0 +1,20 @@
+
+
+<div class="text-center mt-5">
+    <h1 class="display-5 ">Choose any Topic</h1>
+    <p class="lead mt-5">Test your skills with our top topics with variety of questions.</p>
+    <div class="container ">
+        <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 " >
+            <div class="col"  *ngFor="let category of categories" (click)="handleCardClick($event, category.id)">
+               <div class="card shadow-sm p-3 mb-5 bg-body rounded onHover">
+                <img src="{{category.imageUrl}}" alt=""class="card-image-top " >
+                    <div class="card-body">
+                        <h5 class="card-title">{{(category.name).toUpperCase()}}</h5>
+                    </div>
+               </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>

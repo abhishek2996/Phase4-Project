@@ -1,0 +1,19 @@
+
+
+<div class="container Question">
+    <div class="question ">
+        <span class="Q">Q:</span><p>{{question.question}}</p>
+    </div>
+    <div class="options" >
+        <div *ngIf="checkNull(question.options.optionA)"><label class="radio"><input type="checkbox" class="largeCheckbox" value="answerA" name="answerA" (click)="chooseAnswer($event)" [checked]="checkedItems['answerA']"> {{question.options.optionA}}</label> </div>
+        <div *ngIf="checkNull(question.options.optionB) "><label class="radio"><input type="checkbox" class="largeCheckbox" value="answerB" name="answerB" (click)="chooseAnswer($event)" [checked]="checkedItems['answerB']"> {{question.options.optionB}}</label> </div>
+        <div *ngIf="checkNull(question.options.optionC) "><label class="radio"><input type="checkbox" class="largeCheckbox" value="answerC" name="answerC" (click)="chooseAnswer($event)"[checked]="checkedItems['answerC']"> {{question.options.optionC}}</label> </div>
+        <div *ngIf="checkNull(question.options.optionD) "><label class="radio"><input type="checkbox" class="largeCheckbox" value="answerD" name="answerD" (click)="chooseAnswer($event)" [checked]="checkedItems['answerD']"> {{question.options.optionD}}</label> </div>
+        <div *ngIf="checkNull(question.options.optionE) "><label class="radio"><input type="checkbox" class="largeCheckbox" value="answerE" name="answerE" (click)="chooseAnswer($event)" [checked]="checkedItems['answerE']"> {{question.options.optionE}}</label> </div>
+        <div *ngIf="checkNull(question.options.optionF)"><label class="radio"><input type="checkbox" class="largeCheckbox" value="answerF" name="answerF" (click)="chooseAnswer($event)" [checked]="checkedItems['answerF']"> {{question.options.optionF}}</label> </div>
+
+    </div>
+
+   
+</div>
+
